@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <style>
+        #myCanvas {
+            animation: pulsate 1s ease-out;
+            animation-iteration-count: infinite;
+            opacity: 0.0;
+        }
+
+        @-webkit-keyframes pulsate {
+            0% {
+                -webkit-transform: scale(0.1, 0.1);
+                opacity: 0.0;
+            }
+
+            50% {
+                opacity: 1.0;
+            }
+
+            100% {
+                -webkit-transform: scale(1.2, 1.2);
+                opacity: 0.0;
+            }
+        }
+
+        #myCanvas2 {
+            animation: opacityPulse 1s ease-out;
+            animation-iteration-count: infinite;
+            opacity: 0;
+        }
+
+        @-webkit-keyframes opacityPulse {
+            0%
+
+        {
+            opacity: 0.0;
+        }
+
+        50% {
+            opacity: 1.0;
+        }
+
+        100% {
+            opacity: 0.0;
+        }
+
+        }
+
+        #myCanvas3 {
+            animation: rotating 3s linear infinite;
+        }
+
+        @keyframes rotating {
+            from {
+                -ms-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            to {
+                -ms-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100">
+        Your browser does not support the canvas element.
+    </canvas>
+    <br />
+    <br />
+
+    <canvas id="myCanvas2" width="200" height="100">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <canvas id="myCanvas3" width="200" height="100">
+        Your browser does not support the canvas element.
+    </canvas>
+
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+    <script>
+        var canvas = document.getElementById("myCanvas2");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#a1ae25";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+    <script>
+        var canvas = document.getElementById("myCanvas3");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#219bc3";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+</body>
+</html>
